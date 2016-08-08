@@ -1,0 +1,94 @@
+body {background-color: rgb(0,204,153);}
+
+div {
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+
+	/* No support for these yet, use at own risk */
+	-o-user-select: none;
+	user-select: none;   
+} 
+
+.player_cards {
+    display:inline-block; 
+}
+
+.card {
+	  display:inline-block; 
+  	background: transparent none no-repeat;
+  	background-size: contain;
+  	width: 60px;
+  	height: 90px;
+  	border-radius: 6px;
+}
+
+#deck {background: transparent url('../img/carte/dalnegropiacentineback-60x90.jpg') no-repeat;}
+/*#p1 .card {background: transparent url('../img/carte/dalnegropiacentineback-60x90.jpg') no-repeat;}*/
+
+.card.empty_slot {visibility: hidden; background-image: none; background-color: transparent;}
+
+.player {margin-left: 30px;}
+#center_box {margin: 50px 0;}
+#deck_box {/*margin-left: 100px;*/ margin-left: 13px;}
+#card_slot {/*margin-left: 63px;*/ margin-left: 30px;}
+#deck_box, #card_slot {display: inline-block;}
+
+.score {display: inline-block; position: absolute; /*margin-left: 137px;*/ margin-left: 8px; width: 60px; height: 90px;}
+.score > span {position: absolute; right: 0; font-size: 22px; font-weight: bold;}
+#p0 > .score {color: red;}
+#p1 > .score {color: blue;}
+#p0 > .score > span {top: 0;}
+#p1 > .score > span {bottom: 0;}
+
+.player.picker .card {border: 2px solid;}
+#p0.picker .card {border-color: red;}
+#p1.picker .card {border-color: blue;}
+
+.card.winning  {border: 2px solid;}
+#p0_card.winning {border-color: red;}
+#p1_card.winning {border-color: blue;}
+
+#round {font-weight: bold;}
+
+#briscola {
+	position: relative;
+	z-index: -1;
+	left: 32px;
+	bottom: -2px;
+	
+	-webkit-transform: rotate(-34deg);
+    -moz-transform: rotate(-34deg);
+    -ms-transform: rotate(-34deg);
+    -o-transform: rotate(-34deg);
+    transform: rotate(-34deg);
+}
+
+/*
+.picker > .card:not(.empty_slot):nth-child(1):hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1) rotate(-15deg) translate(5px, 10px);
+}
+
+.player > .card:not(.empty_slot):nth-child(1) {
+	  transform: rotate(-15deg) translate(5px, 10px);
+}
+
+.picker > .card:not(.empty_slot):nth-child(2):hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.picker > .card:not(.empty_slot):nth-child(3):hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1) rotate(15deg) translate(-5px, 10px);
+}
+
+.player > .card:not(.empty_slot):nth-child(3) {
+	  transform: rotate(15deg) translate(-5px, 10px);
+}
+*/
+
