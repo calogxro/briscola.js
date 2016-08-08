@@ -1,3 +1,5 @@
+"use strict";
+
 let semi = {
   "coins": "oro", 
   "clubs": "bastoni", 
