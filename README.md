@@ -4,7 +4,7 @@ You can run it on the console
 
 	node ./src/index.js
 
-or launch the web-server and visit [http://localhost:8080/demo/]()
+or launch the web-server and visit [http://localhost:8080/demo/](http://localhost:8080/demo/)
 
 	http-server ./web
 
