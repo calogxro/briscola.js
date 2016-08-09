@@ -5,7 +5,6 @@ const clone = require('./helper/clone');
 class Hand { 
 
   constructor(num_players) {
-    this.trump;
     this.cards = [];
     this.num_players = num_players;
   }
