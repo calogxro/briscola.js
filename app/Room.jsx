@@ -14,6 +14,7 @@ class Room extends React.Component {
   constructor(props) {
     super(props);
 
+    this.playerId = props.playerId;
     this.game = props.game;
 
     this.game.on('stateChanged', this.updateState.bind(this));
@@ -23,16 +24,17 @@ class Room extends React.Component {
 
     this.state = {
       hand: {
-        "cards":[]
+        "cards": [
+        ]
       },
-      "players":[
+      players: [
         {
-          "id":"p0",
+          "id":"1",
           "score":0,
           "cards":[null,null,null]
         },
         {
-          "id":"p1",
+          "id":"0",
           "score":0,
           "cards":[null,null,null]
         }
@@ -45,7 +47,7 @@ class Room extends React.Component {
 
     let that = this;
 
-    setTimeout(function(){ 
+    setTimeout(function() {
       that.setState(state);
 
       //debug('----------------------------------------------------------------');
@@ -55,9 +57,21 @@ class Room extends React.Component {
   }
 
   render() {
+    let playerId = this.playerId;
+    let players = this.state.players;
+
+    // "me": the player at the bottom/zero
+    let p0 = players.find(function(player) {
+      return player.id == playerId;
+    });
+
+    let p1 = players.find(function(player) {
+      return player.id != playerId;
+    });
+
     return (
       <div>
-        <Player player={this.state.players[1]} />
+        <Player player={p1} />
 
         <div id="center_box">
           <CardSlot hand={this.state.hand} />
@@ -68,7 +82,7 @@ class Room extends React.Component {
           </div>
         </div>
             
-        <Player player={this.state.players[0]} />
+        <Player player={p0} />
       </div>
     );
   }
