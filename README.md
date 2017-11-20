@@ -1,4 +1,4 @@
-[Demo](https://calog3r0.github.io/briscola.js/demo/web/index.html)
+[Demo](https://calog3r0.github.io/briscola.js/index.html)
 
 [https://en.wikipedia.org/wiki/Briscola]()
 
