@@ -1,0 +1,94 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.table > div {
+ margin: auto;
+ min-height: 120px;
+}
+.card {
+  display: inline-block;
+  height: 90px;
+  width: 60px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+}
+.card.empty_slot {
+  visibility: hidden;
+}
+.card#trump {
+  position: absolute;
+  left: 30px;
+  transform: rotate(30deg);
+}
+.card#deck {
+  position: absolute;
+  left: 0px;
+}
+span.card:before {
+  content: 'X';
+  position: absolute;
+  width: 60px;
+  height: 90px;
+  line-height: 1.5;
+  font-size: 60px;
+  text-align: center;
+}
+#card_slot {
+  position: relative;
+  width: 164px;
+}
+#card_slot #p0_card {
+  position: absolute;
+  left: 82px;
+}
+#card_slot #p1_card {
+  position: absolute;
+  left: 0px;
+}
+.player_cards {
+  position: relative;
+  width: 246px;
+}
+.player_cards .card {
+  position: absolute;
+}
+.player_cards .card.card-slot-player-0-0,
+.player_cards .card.card-slot-player-1-0 {
+  left: 0;
+}
+.player_cards .card.card-slot-player-0-1,
+.player_cards .card.card-slot-player-1-1 {
+  left: 33%;
+}
+.player_cards .card.card-slot-player-0-2,
+.player_cards .card.card-slot-player-1-2 {
+  left: 66%;
+}
+#p0.picker .card,
+#card_slot .card.card-slot-player-0-got {
+  border-color: blue;
+}
+#p1.picker .card,
+#card_slot .card.card-slot-player-1-got {
+  border-color: yellow;
+}
+    
+/*#table .trick span {
+  width: 60px;
+  height: 90px;
+  display: inline-block;
+  font-size: 60px;
+  line-height: 1;
+  font-family: cursive;
+  color: cadetblue;
+  border: 1px solid black;
+  vertical-align: top;
+  border-radius: 3px;
+}*/
